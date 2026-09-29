@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Replatforming search and discovery | Hojun Park</title>
-<meta name="description" content="Carhartt WIP is moving search, browse and recommendations to a new engine, starting with Germany. I led the choice of engine, then the harder part: getting the catalog, the merchandising rules and the measurement ready for it.">
-<meta property="og:title" content="Replatforming search and discovery | Hojun Park">
-<meta property="og:description" content="Carhartt WIP is moving search, browse and recommendations to a new engine, starting with Germany. I led the choice of engine, then the harder part: getting the catalog, the merchandising rules and the measurement ready for it.">
+<title>Replatforming search, browse and recommendations | Hojun Park</title>
+<meta name="description" content="I own Carhartt WIP's move to a new discovery platform: the requirements, the vendor choice, the roadmap, the UX, and the scrum team of engineers delivering it on web and app.">
+<meta property="og:title" content="Replatforming search, browse and recommendations | Hojun Park">
+<meta property="og:description" content="I own Carhartt WIP's move to a new discovery platform: the requirements, the vendor choice, the roadmap, the UX, and the scrum team of engineers delivering it on web and app.">
 <meta property="og:image" content="https://www.hojunpark.com/hojun-park-portrait.jpg">
 <link rel="preload" href="/assets/fonts/Geist-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/styles.css?v=6">
+<link rel="stylesheet" href="/assets/styles.css?v=8">
 </head>
 <body>
 <header class="site-header"><div class="wrap">
@@ -22,9 +22,9 @@
 <section class="case-hero"><div class="wrap">
 <a class="back" href="/#work">All work</a>
 <p class="label">Carhartt WIP, 2026</p>
-<h1>Replatforming search and discovery</h1>
-<p class="lede">Carhartt WIP is moving search, browse and recommendations to a new engine, starting with Germany. I led the choice of engine, then the harder part: getting the catalog, the merchandising rules and the measurement ready for it.</p>
-<dl class="snapshot"><div><dt>Role</dt><dd>Product Lead</dd></div><div><dt>Timeline</dt><dd>Evaluation early 2026, MVP October, full integration by end of 2026</dd></div><div><dt>Team</dt><dd>Web and app engineering, an implementation partner, the vendor and merchandising</dd></div><div><dt>Scope</dt><dd>Up to 50K SKUs including variants, 25 markets</dd></div></dl>
+<h1>Replatforming search, browse and recommendations</h1>
+<p class="lede">I own Carhartt WIP's move to a new discovery platform: the requirements, the vendor choice, the roadmap, the UX, and the scrum team of engineers delivering it on web and app.</p>
+<dl class="snapshot"><div><dt>Role</dt><dd>Product owner, running the scrum team</dd></div><div><dt>Timeline</dt><dd>Requirements from February 2026, MVP in October, full integration by year end</dd></div><div><dt>Team</dt><dd>Web and app engineers, an implementation partner, the vendor and merchandising</dd></div><div><dt>Scale</dt><dd>3.5M+ searches a month, 25 markets, web and app</dd></div></dl>
 </div></section>
 <div class="case-cover"><div class="scene" aria-hidden="true">
 <div class="scene-bar"><b>Catalog to customer</b></div>
@@ -38,24 +38,28 @@
 <div class="flags"><span>New-arrival dates no longer overwritten</span><span>Attribute names aligned with the source</span></div>
 </div></div></div>
 <div class="wrap">
-<section class="problem"><p class="kicker">The problem</p><h2>Search and recommendations worked, but nobody could steer them.</h2><div class="pains"><article><h3>Ranking nobody could explain</h3><p>Merchandisers couldn't see why a product ranked where it did, so every fix became an engineering ticket.</p></article><article><h3>An engine that saw a different catalog</h3><p>Product data arrived through a separate feed. Names drifted from the source and new arrivals kept losing their dates.</p></article><article><h3>Recommendations on autopilot</h3><p>Placements ran on old rules that no one owned, tested or measured.</p></article></div></section>
+<section class="problem"><p class="kicker">The problem</p><h2>Search and recommendations ran, but nobody could steer, test or trust them.</h2><div class="pains"><article><h3>Ranking nobody could steer</h3><p>Merchandisers couldn't see why a product ranked where it did, so every change became an engineering ticket.</p></article><article><h3>No way to test</h3><p>There was no A/B testing in search, merchandising or recommendations, so every change was a judgment call.</p></article><article><h3>A catalog out of sync</h3><p>Product data reached the old engine through a separate feed and drifted from the source.</p></article></div></section>
 <p class="kicker section-kicker">What I did</p>
-<section class="block"><div class="block-text"><h2>One brief, six engines</h2><p>I wrote a single brief covering what the business needed: ranking we could explain, merchandising across markets, recommendations, and tests teams could run without engineering. Six engines were scored against it. I then led the commercial negotiation, including a success target we could measure.</p></div><div class="block-visual"><div class="scene" aria-hidden="true" style="max-width:420px"><div class="scene-bar"><b>The brief, scored for six engines</b></div>
-<div class="scene-body" style="display:grid;gap:8px">
-<div class="facet"><span>Ranking we can explain</span></div>
-<div class="facet"><span>Merchandising across markets</span></div>
-<div class="facet"><span>Recommendations</span></div>
-<div class="facet"><span>Tests without engineering</span></div>
-<div class="facet"><span>Fit with our catalog and variants</span></div>
-<div class="chips" style="margin-top:6px"><span class="off">Five other engines</span><span class="on">Constructor</span></div>
-</div></div></div></section>
-<section class="block"><div class="block-text"><h2>Fix the catalog before the launch</h2><p>The old engine received product data through a separate feed, so names and values drifted from the source. A date bug kept resetting which products counted as new. We fixed both before switching, so the new engine starts clean.</p></div><div class="block-visual"><div class="scene" aria-hidden="true" style="max-width:420px"><div class="scene-bar"><b>Fixed before launch</b></div>
+<section class="block"><div class="block-text"><h2>Defined the platform before picking a vendor</h2><p>I wrote 87 requirements across search, merchandising, recommendations and the platform itself, and split them into MVP and later phases. Every demo and every vendor score used them, which kept the decision about our problems rather than the best demo.</p></div><div class="block-visual"><div class="scene" aria-hidden="true" style="max-width:420px"><div class="scene-bar"><b>Requirements by pillar</b><b>87 in total</b></div>
+<div class="bars" style="max-width:none">
+<div class="bar after"><span>Search</span><i style="width:60%"></i><span>21</span></div>
+<div class="bar after"><span>Merch</span><i style="width:46%"></i><span>16</span></div>
+<div class="bar after"><span>Recs</span><i style="width:43%"></i><span>15</span></div>
+<div class="bar after"><span>Platform</span><i style="width:100%"></i><span>35</span></div>
+</div>
+<div class="chips" style="margin-top:12px"><span class="on">MVP scope</span><span>Later phases</span><span class="off">Six vendors scored</span></div>
+</div></div></section>
+<section class="block"><div class="block-text"><h2>Ran delivery as a scrum team</h2><p>Six two-week sprints from contract to MVP. I own the backlog, the priorities and the trade-offs across web, app, the implementation partner and the vendor.</p></div><div class="block-visual"><div class="scene" aria-hidden="true" style="max-width:440px"><div class="scene-bar"><b>Delivery plan</b><b>2026</b></div>
+<div class="sprints"><i>S1</i><i>S2</i><i>S3</i><i>S4</i><i class="mvp">S5<br>MVP</i><i>S6</i><i class="later">Full integration by year end</i></div>
+<div class="chips" style="margin-top:12px"><span class="on">Backlog and priorities</span><span>Web</span><span>App</span><span>Partner</span><span>Vendor</span></div>
+</div></div></section>
+<section class="block"><div class="block-text"><h2>Fixed the data first</h2><p>Attribute names now match the source catalog, new-arrival dates no longer reset overnight, and revenue tracking is in place before launch, so the new engine starts clean and results can be measured.</p></div><div class="block-visual"><div class="scene" aria-hidden="true" style="max-width:420px"><div class="scene-bar"><b>Fixed before launch</b></div>
 <div class="scene-body" style="display:grid;gap:10px">
 <div class="facet"><span>New-arrival dates</span><small>no longer reset overnight</small></div>
 <div class="facet"><span>Attribute names</span><small>match the source catalog</small></div>
 <div class="facet"><span>Revenue tracking</span><small>in place before launch</small></div>
 </div></div></div></section>
-<section class="block"><div class="block-text"><h2>Browse: rules that survive the model</h2><p>Filters come from a curated set of attributes, six to nine per page, with category rules on top. Merchandising boosts sit above the learned ranking, so campaigns survive model updates, and sold-out products stay visible but rank low.</p></div><div class="block-visual"><div class="scene" style="max-width:360px"><div class="scene-bar"><b>Category page</b></div>
+<section class="block"><div class="block-text"><h2>Designed the browse experience</h2><p>Curated filters per category, six to nine per page. Merchandising rules sit on top of the ranking model, so campaigns survive model updates, and sold-out products stay visible but rank low.</p></div><div class="block-visual"><div class="scene" style="max-width:360px"><div class="scene-bar"><b>Category page</b></div>
 <div class="scene-body">
 <div class="toggle" data-toggle="scope" data-autoplay role="group" aria-label="Choose a category"><button type="button" data-value="jackets" aria-pressed="true">Jackets</button><button type="button" data-value="shoes" aria-pressed="false">Footwear</button></div>
 <div class="facets" id="scope">
@@ -69,7 +73,7 @@
 </div>
 <div class="chips" style="margin-top:12px"><span class="on">Boost: new arrivals</span><span>Bury: sold out</span></div>
 </div></div></div></section>
-<section class="block"><div class="block-text"><h2>Recommendations: designed, not copied</h2><p>I mapped every current placement, then proposed a new setup rather than porting the old rules. Each pod gets one goal, one anchor, a strategy and a fallback. Curated outfit links fill Complete the look first. One deliberate difference: search keeps sold-out items visible but ranked low, while recommendations leave them out.</p></div><div class="block-visual"><div class="scene" style="max-width:440px"><div class="scene-bar"><b>Recommendation pods, proposed setup</b></div>
+<section class="block"><div class="block-text"><h2>Rebuilt recommendations around business goals</h2><p>I audited every existing placement and proposed a new strategy. Each placement gets one goal, a primary strategy, a fallback and guardrails. Search keeps sold-out items ranked low, while recommendations leave them out.</p></div><div class="block-visual"><div class="scene" style="max-width:440px"><div class="scene-bar"><b>Recommendation pods, proposed setup</b></div>
 <div class="scene-body">
 <div class="toggle" data-toggle="pods" data-autoplay role="group" aria-label="Choose a placement"><button type="button" data-value="look" aria-pressed="true">Complete the look</button><button type="button" data-value="alt" aria-pressed="false">Also like</button><button type="button" data-value="cart" aria-pressed="false">Cart</button><button type="button" data-value="err" aria-pressed="false">404</button><button type="button" data-value="zero" aria-pressed="false">Search</button></div>
 <div class="facets" id="pods">
@@ -99,9 +103,9 @@
 </div></div></div></div></section>
 
 <section class="decision"><h2>How we'll know it worked</h2><ul class="options" style="--n:2"><li><h3>Vendor dashboards</h3><p>Quick to read, but each engine reports differently, and the old one saw different traffic.</p></li><li class="chosen"><span class="tag">What we did</span><h3>GA4 before and after, against a locked baseline</h3><p>One source and one baseline, captured before launch. Less flattering, and much harder to dispute.</p></li></ul></section>
-<section class="results"><p class="kicker">Where it stands</p><h2>The MVP goes live in Germany in October, with full integration by the end of the year.</h2><div class="metrics"><div><b>6</b><span>engines scored against one brief</span></div><div><b>3</b><span>catalog defects fixed before launch</span></div><div><b>5</b><span>recommendation placements redesigned</span></div><div><b>25</b><span>markets in scope</span></div></div><div class="outcomes"><div class="worked"><h3>What worked</h3><ul><li>Scoring every engine against one brief kept the decision about our problems, not the best demo.</li><li>Fixing catalog data before the switch, so the new engine didn't inherit old errors.</li></ul></div><div class="didnt"><h3>What didn't</h3><ul><li>Revenue was never tracked in the proof phase, so early results couldn't be compared until tracking was rebuilt.</li><li>The measurement design came after the contract, which limited how precisely we could define success.</li></ul></div></div></section>
+<section class="results"><p class="kicker">Where it stands</p><h2>The MVP goes live in Germany in October, with full integration by the end of the year.</h2><div class="metrics"><div><b>3.5M+</b><span>searches a month</span></div><div><b>87</b><span>requirements across four pillars</span></div><div><b>25</b><span>markets in scope</span></div><div><b>~12 weeks</b><span>from contract to MVP</span></div></div><div class="outcomes"><div class="worked"><h3>What's working</h3><ul><li>One set of requirements kept the vendor choice about our problems, not the best demo.</li><li>Fixing catalog data before the switch, so the new engine doesn't inherit old errors.</li></ul></div><div class="didnt"><h3>Risks I'm managing</h3><ul><li>Revenue wasn't tracked in the proof phase. Tracking is rebuilt before launch so results can be compared at all.</li><li>The success target sits close to what can be reliably detected, so it's read against a locked baseline over 16 weeks.</li></ul></div></div></section>
 <section class="reflection"><h2>What I'd do differently</h2><p>I'd agree the measurement design before signing, not during the build. Two tracking gaps only surfaced in implementation, and both would have shaped how we defined success.</p></section>
-<nav class="next-case" aria-label="Next case"><span class="label">Next case</span><a href="/work/data-enrichment.html">Automating product data enrichment</a></nav>
+<nav class="next-case" aria-label="Next case"><span class="label">Next case</span><a href="/work/data-enrichment.html">Automating the product data flow</a></nav>
 </div>
 </main>
 <section class="contact" id="contact"><div class="wrap"><div>
@@ -112,6 +116,6 @@
 </div>
 </div></div></section>
 <footer class="site-footer"><div class="wrap"><span>© 2026 Hojun Park</span><span>Munich, Germany</span></div></footer>
-<script src="/assets/site.js?v=6"></script>
+<script src="/assets/site.js?v=8"></script>
 </body>
 </html>

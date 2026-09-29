@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Automating product data enrichment | Hojun Park</title>
-<meta name="description" content="Search and filters only work with what the catalog describes, and our enrichment was slow and inconsistent from season to season. I audited it, cut it back, then automated the attributes discovery depends on.">
-<meta property="og:title" content="Automating product data enrichment | Hojun Park">
-<meta property="og:description" content="Search and filters only work with what the catalog describes, and our enrichment was slow and inconsistent from season to season. I audited it, cut it back, then automated the attributes discovery depends on.">
+<title>Automating the product data flow | Hojun Park</title>
+<meta name="description" content="Every product travels from PLM and ERP into the PIM, then to the shop system and the CMS. I audited that flow end to end, found what could be automated or fixed at the source, and worked with engineering to connect or replace the manual steps.">
+<meta property="og:title" content="Automating the product data flow | Hojun Park">
+<meta property="og:description" content="Every product travels from PLM and ERP into the PIM, then to the shop system and the CMS. I audited that flow end to end, found what could be automated or fixed at the source, and worked with engineering to connect or replace the manual steps.">
 <meta property="og:image" content="https://www.hojunpark.com/hojun-park-portrait.jpg">
 <link rel="preload" href="/assets/fonts/Geist-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/styles.css?v=6">
+<link rel="stylesheet" href="/assets/styles.css?v=8">
 </head>
 <body>
 <header class="site-header"><div class="wrap">
@@ -22,38 +22,43 @@
 <section class="case-hero"><div class="wrap">
 <a class="back" href="/#work">All work</a>
 <p class="label">Carhartt WIP, 2026</p>
-<h1>Automating product data enrichment</h1>
-<p class="lede">Search and filters only work with what the catalog describes, and our enrichment was slow and inconsistent from season to season. I audited it, cut it back, then automated the attributes discovery depends on.</p>
-<dl class="snapshot"><div><dt>Role</dt><dd>Product Lead</dd></div><div><dt>Timeline</dt><dd>2026, FW26 and SS27 seasons</dd></div><div><dt>Team</dt><dd>Content, copywriting, photo studio, production and development</dd></div><div><dt>Output</dt><dd>313 rules audited, 510 outfit links, 24 model records</dd></div></dl>
+<h1>Automating the product data flow</h1>
+<p class="lede">Every product travels from PLM and ERP into the PIM, then to the shop system and the CMS. I audited that flow end to end, found what could be automated or fixed at the source, and worked with engineering to connect or replace the manual steps.</p>
+<dl class="snapshot"><div><dt>Role</dt><dd>Product owner for the product data flow</dd></div><div><dt>Timeline</dt><dd>2026, FW26 and SS27 seasons</dd></div><div><dt>Team</dt><dd>Content, copywriting, photo studio, production and engineering</dd></div><div><dt>Scope</dt><dd>PLM and ERP to PIM, Commercetools and CMS</dd></div></dl>
 </div></section>
-<div class="case-cover"><div class="scene" aria-hidden="true" style="max-width:380px">
-<div class="scene-bar"><b>Product record</b></div>
-<div class="scene-body" style="display:grid;grid-template-columns:96px 1fr;gap:14px;align-items:start">
-<svg viewBox="0 0 96 110" width="96" height="110"><rect width="96" height="110" fill="#f1efec"/><path d="M34 18 L48 26 L62 18 L80 30 L74 48 L66 44 L66 94 L30 94 L30 44 L22 48 L16 30 Z" fill="#141316" opacity=".88"/><path d="M48 26 L48 94" stroke="#f6f3f1" stroke-width="1.2" opacity=".6"/></svg>
-<div style="display:grid;gap:8px">
-<div class="chips"><span class="on">Color: brown</span><span class="on">Fabric: cotton canvas</span></div>
-<div class="chips"><span>Fit: relaxed</span><span>Outfit: 3 links</span></div>
-<div class="chips"><span>EN</span><span class="off">DE</span><span class="off">FR</span><span class="off">IT</span></div>
-</div></div></div></div>
+<div class="case-cover"><div class="scene" aria-hidden="true" style="max-width:560px"><div class="scene-bar"><b>How a product reaches the storefront</b></div>
+<div class="flow"><div class="node">PLM<small>Design data</small></div><div class="node">ERP<small>Prices, stock</small></div><div class="node hot">PIM<small>Enrichment</small></div><div class="node">Commercetools<small>Shop system</small></div><div class="node">CMS<small>Storefront</small></div></div>
+<div class="chips" style="margin-top:12px"><span class="on">7 manual steps automated</span><span>Rules consolidated</span><span>Release gates added</span></div>
+</div></div>
 <div class="wrap">
-<section class="problem"><p class="kicker">The problem</p><h2>Discovery depended on product data that was slow to produce and inconsistent to use.</h2><div class="pains"><article><h3>Rules that fought each other</h3><p>313 enrichment rules had grown one at a time, and category logic overlapped and conflicted.</p></article><article><h3>Outfits linked by hand</h3><p>Complete-the-look links and model records were entered manually every season.</p></article><article><h3>One attribute, many meanings</h3><p>Color and fabric were written separately per language, so filters behaved differently by market.</p></article></div></section>
+<section class="problem"><p class="kicker">The problem</p><h2>Product data moved through five systems, and people patched it by hand at every hand-off.</h2><div class="pains"><article><h3>Manual steps between systems</h3><p>Two people reviewed and corrected around 1,500 items by hand every season.</p></article><article><h3>Rules nobody could untangle</h3><p>313 PIM rules had grown one at a time, with overlapping and conflicting logic.</p></article><article><h3>Wrong or late on the storefront</h3><p>Products went live before they were ready, categories were guessed from names, and new-arrival dates got lost.</p></article></div></section>
 <p class="kicker section-kicker">What I did</p>
-<section class="block"><div class="block-text"><h2>313 rules, audited</h2><p>The PIM had grown one rule at a time. We reviewed all 313, consolidated the category rules and rewrote the ones that conflicted.</p></div><div class="block-visual"><div style="width:100%;max-width:420px"><div class="cells" data-cells="313" aria-hidden="true"></div>
-<p style="margin:14px 0 0;font-weight:800">313 rules, each reviewed</p></div></div></section>
-<section class="block"><div class="block-text"><h2>Attributes from the product itself</h2><p>AI rules now set color and fabric, written in English first and translated after, so every market gets the same meaning.</p></div><div class="block-visual"><div class="scene" aria-hidden="true" style="max-width:400px"><div class="scene-bar"><b>Written once, translated after</b></div>
-<div class="scene-body" style="display:grid;gap:12px">
-<div class="facet"><span>EN</span><small>Cotton canvas, relaxed fit</small></div>
-<div class="chips"><span class="on">DE</span><span class="on">FR</span><span class="on">IT</span><span class="on">NL</span><span class="on">NO</span><span class="on">+8</span></div>
+<section class="block"><div class="block-text"><h2>Mapped the flow end to end</h2><p>I traced how product data moves from PLM and ERP through the PIM to the shop system and the CMS, and marked every point where someone re-entered or corrected data by hand.</p></div><div class="block-visual"><div class="scene" aria-hidden="true" style="max-width:440px"><div class="scene-bar"><b>Hand-offs that needed a person</b></div>
+<div class="facets">
+<div class="facet weak"><span>Color and fabric</span><small>typed per language</small></div>
+<div class="facet weak"><span>Outfit links</span><small>entered from the shoot</small></div>
+<div class="facet weak"><span>Categories</span><small>assigned by an Excel macro</small></div>
+<div class="facet weak"><span>Release</span><small>live before ready</small></div>
+<div class="facet weak"><span>New-arrival dates</span><small>reset overnight</small></div>
 </div></div></div></section>
-<section class="block"><div class="block-text"><h2>Outfits without typing</h2><p>Scripts read photo-studio output and create outfit links and model records in the PIM. For FW26 that was 510 links and 24 model records nobody entered by hand.</p></div><div class="block-visual"><div class="scene" aria-hidden="true" style="max-width:420px"><div class="scene-bar"><b>FW26, generated from studio output</b></div>
-<div class="scene-body" style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-<div class="facet" style="display:block"><div class="mini-count">510</div>outfit links</div>
-<div class="facet" style="display:block"><div class="mini-count">24</div>model records</div>
+<section class="block"><div class="block-text"><h2>Sorted every step</h2><p>Each manual step went into one of three groups: automate it, fix it at the source, or keep it manual on purpose. Merchandising choices like featured slots stay with people.</p></div><div class="block-visual"><div class="scene" aria-hidden="true" style="max-width:460px"><div class="scene-bar"><b>Every step, sorted</b></div>
+<div class="triage">
+<div><h4>Automate</h4><span>Color and fabric</span><span>Outfit links</span><span>Categories</span><span>Sale categories</span></div>
+<div><h4>Fix at source</h4><span>Naming</span><span>New-arrival dates</span><span>Readiness flags</span></div>
+<div><h4>Keep manual</h4><span>Featured slots</span><span>Campaign edits</span></div>
+</div></div></div></section>
+<section class="block"><div class="block-text"><h2>Built the automations with engineering</h2><p>AI rules now enrich color and fabric, outfit links come straight from the photo studio, categories are derived from the PIM, and release gates keep unfinished products offline.</p></div><div class="block-visual"><div class="scene" aria-hidden="true" style="max-width:440px"><div class="scene-bar"><b>Built with engineering</b></div>
+<div class="facets">
+<div class="facet"><span>AI enrichment rules</span><small>color, fabric</small></div>
+<div class="facet"><span>Outfit links</span><small>from the photo studio</small></div>
+<div class="facet"><span>Category assignment</span><small>derived from PIM</small></div>
+<div class="facet"><span>Release gates</span><small>hold back unready products</small></div>
+<div class="facet hl"><span>Manual review</span><small>~1.5K items a season, now gone</small></div>
 </div></div></div></section>
 
-<section class="decision"><h2>The call</h2><ul class="options" style="--n:2"><li><h3>Automate what's there</h3><p>Faster, but it would have scaled rules that already conflicted.</p></li><li class="chosen"><span class="tag">What we did</span><h3>Audit and consolidate, then automate</h3><p>A slower start, with every automated rule sitting on a clean base.</p></li></ul></section>
-<section class="results"><p class="kicker">Results</p><h2>Enrichment now runs on a smaller rule set, and the manual outfit work is gone.</h2><div class="metrics"><div><b>313</b><span>rules audited and consolidated</span></div><div><b>510</b><span>outfit links generated for FW26</span></div><div><b>24</b><span>model records created automatically</span></div></div><div class="outcomes"><div class="worked"><h3>What worked</h3><ul><li>Consolidating before automating, so every AI rule sits on a clean base.</li><li>Writing attributes in English first gave every market the same meaning.</li></ul></div><div class="didnt"><h3>What didn't</h3><ul><li>We didn't measure attribute coverage at the start, so the impact shows as counts rather than coverage gained.</li></ul></div></div></section>
-<section class="reflection"><h2>What I'd do differently</h2><p>I'd roll automation out category by category instead of season by season, so each gain is visible sooner and easier to attribute.</p></section>
+<section class="decision"><h2>The call</h2><ul class="options" style="--n:2"><li><h3>Automate what's there</h3><p>Faster, but it would have scaled rules that already conflicted.</p></li><li class="chosen"><span class="tag">What we did</span><h3>Audit and consolidate, then automate</h3><p>A slower start, with every automation sitting on a clean base.</p></li></ul></section>
+<section class="results"><p class="kicker">Results</p><h2>Seven manual steps are automated, and the seasonal hand review is gone.</h2><div class="metrics"><div><b>7</b><span>manual steps automated</span></div><div><b>~1.5K</b><span>items a season no longer reviewed by hand</span></div><div><b>313</b><span>PIM rules audited</span></div><div><b>33,036</b><span>products checked for category accuracy</span></div></div><div class="outcomes"><div class="worked"><h3>What worked</h3><ul><li>Auditing before automating, so every automation sits on a clean base.</li><li>Fixing issues at the source instead of patching them further down the flow.</li></ul></div><div class="didnt"><h3>What didn't</h3><ul><li>We didn't measure time spent before we started, so savings are estimated rather than tracked.</li></ul></div></div></section>
+<section class="reflection"><h2>What I'd do differently</h2><p>I'd roll automation out step by step within the season instead of all at once, so each gain is visible sooner and easier to attribute.</p></section>
 <nav class="next-case" aria-label="Next case"><span class="label">Next case</span><a href="/work/filters.html">Better filters from messy product data</a></nav>
 </div>
 </main>
@@ -65,6 +70,6 @@
 </div>
 </div></div></section>
 <footer class="site-footer"><div class="wrap"><span>© 2026 Hojun Park</span><span>Munich, Germany</span></div></footer>
-<script src="/assets/site.js?v=6"></script>
+<script src="/assets/site.js?v=8"></script>
 </body>
 </html>
