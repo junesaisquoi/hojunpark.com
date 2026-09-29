@@ -9,7 +9,7 @@
 <meta property="og:description" content="Carhartt WIP is moving search, browse and recommendations to a new engine, starting with Germany. I led the choice of engine, then the harder part: getting the catalog, the merchandising rules and the measurement ready for it.">
 <meta property="og:image" content="https://www.hojunpark.com/hojun-park-portrait.jpg">
 <link rel="preload" href="/assets/fonts/Geist-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/styles.css">
+<link rel="stylesheet" href="/assets/styles.css?v=6">
 </head>
 <body>
 <header class="site-header"><div class="wrap">
@@ -38,6 +38,8 @@
 <div class="flags"><span>New-arrival dates no longer overwritten</span><span>Attribute names aligned with the source</span></div>
 </div></div></div>
 <div class="wrap">
+<section class="problem"><p class="kicker">The problem</p><h2>Search and recommendations worked, but nobody could steer them.</h2><div class="pains"><article><h3>Ranking nobody could explain</h3><p>Merchandisers couldn't see why a product ranked where it did, so every fix became an engineering ticket.</p></article><article><h3>An engine that saw a different catalog</h3><p>Product data arrived through a separate feed. Names drifted from the source and new arrivals kept losing their dates.</p></article><article><h3>Recommendations on autopilot</h3><p>Placements ran on old rules that no one owned, tested or measured.</p></article></div></section>
+<p class="kicker section-kicker">What I did</p>
 <section class="block"><div class="block-text"><h2>One brief, six engines</h2><p>I wrote a single brief covering what the business needed: ranking we could explain, merchandising across markets, recommendations, and tests teams could run without engineering. Six engines were scored against it. I then led the commercial negotiation, including a success target we could measure.</p></div><div class="block-visual"><div class="scene" aria-hidden="true" style="max-width:420px"><div class="scene-bar"><b>The brief, scored for six engines</b></div>
 <div class="scene-body" style="display:grid;gap:8px">
 <div class="facet"><span>Ranking we can explain</span></div>
@@ -97,6 +99,7 @@
 </div></div></div></div></section>
 
 <section class="decision"><h2>How we'll know it worked</h2><ul class="options" style="--n:2"><li><h3>Vendor dashboards</h3><p>Quick to read, but each engine reports differently, and the old one saw different traffic.</p></li><li class="chosen"><span class="tag">What we did</span><h3>GA4 before and after, against a locked baseline</h3><p>One source and one baseline, captured before launch. Less flattering, and much harder to dispute.</p></li></ul></section>
+<section class="results"><p class="kicker">Where it stands</p><h2>The MVP goes live in Germany in October, with full integration by the end of the year.</h2><div class="metrics"><div><b>6</b><span>engines scored against one brief</span></div><div><b>3</b><span>catalog defects fixed before launch</span></div><div><b>5</b><span>recommendation placements redesigned</span></div><div><b>25</b><span>markets in scope</span></div></div><div class="outcomes"><div class="worked"><h3>What worked</h3><ul><li>Scoring every engine against one brief kept the decision about our problems, not the best demo.</li><li>Fixing catalog data before the switch, so the new engine didn't inherit old errors.</li></ul></div><div class="didnt"><h3>What didn't</h3><ul><li>Revenue was never tracked in the proof phase, so early results couldn't be compared until tracking was rebuilt.</li><li>The measurement design came after the contract, which limited how precisely we could define success.</li></ul></div></div></section>
 <section class="reflection"><h2>What I'd do differently</h2><p>I'd agree the measurement design before signing, not during the build. Two tracking gaps only surfaced in implementation, and both would have shaped how we defined success.</p></section>
 <nav class="next-case" aria-label="Next case"><span class="label">Next case</span><a href="/work/data-enrichment.html">Automating product data enrichment</a></nav>
 </div>
@@ -109,6 +112,6 @@
 </div>
 </div></div></section>
 <footer class="site-footer"><div class="wrap"><span>© 2026 Hojun Park</span><span>Munich, Germany</span></div></footer>
-<script src="/assets/site.js"></script>
+<script src="/assets/site.js?v=6"></script>
 </body>
 </html>

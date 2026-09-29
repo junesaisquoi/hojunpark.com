@@ -76,7 +76,7 @@ function startAuto(a) {
 function stopAuto(a) { clearInterval(a.timer); a.timer = null; }
 
 // Scroll reveals, with a small stagger between siblings.
-var targets = '.section-head, .proof .wrap > div, .work-card, .more-list li, .build, .stack-grid > div, .numbers li, .block-text, .block-visual, .case-cover, .options li, .reflection, .caps article, .timeline li, .snapshot > div, .facts > div';
+var targets = '.section-head, .proof .wrap > div, .pains article, .metrics div, .outcomes > div, .work-card, .more-list li, .build, .stack-grid > div, .numbers li, .block-text, .block-visual, .case-cover, .options li, .reflection, .caps article, .timeline li, .snapshot > div, .facts > div';
 var els = document.querySelectorAll(targets);
 els.forEach(function (el) {
   el.classList.add('reveal');

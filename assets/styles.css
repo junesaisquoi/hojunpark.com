@@ -120,7 +120,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 600; letter-spacing: -.035em; line-heig
 .more-list .result { margin-top: auto; padding-top: 10px; border-top: 1px solid var(--line); font-size: 14px; font-weight: 600; color: var(--text); }
 
 /* Builds */
-.build-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.build-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .build { display: flex; flex-direction: column; border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); overflow: hidden; }
 .build-visual { display: grid; place-items: center; height: 200px; margin: 8px; padding: 20px; border-radius: 18px; background: var(--accent-tint); overflow: hidden; }
 .build h3 { margin: 18px 22px 6px; font-size: 19px; }
@@ -316,4 +316,51 @@ h1, h2, h3, h4 { margin: 0; font-weight: 600; letter-spacing: -.035em; line-heig
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .js .reveal, .js .reveal .chips span, .js .reveal .cells i { opacity: 1 !important; transform: none !important; }
   .js .reveal .bar i { transform: none !important; }
+}
+
+/* Builds, problem-first */
+.build.featured { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); }
+.build.featured .build-visual { height: auto; min-height: 340px; margin-right: 0; }
+.build-copy { display: flex; flex-direction: column; gap: 10px; padding: 20px 22px 24px; }
+.build.featured .build-copy { justify-content: center; padding: clamp(24px, 3vw, 40px); }
+.build-copy h3 { margin: 0; font-size: 21px; }
+.build.featured .build-copy h3 { font-size: clamp(24px, 2.4vw, 32px); }
+.build-copy p { margin: 0; font-size: 15px; color: var(--muted); }
+.build-copy p b { color: var(--text); font-weight: 600; }
+.build-copy .result { align-self: flex-start; margin-top: 6px; padding: 6px 12px; border-radius: 999px; background: var(--accent-tint); color: var(--accent-deep); font-size: 13px; font-weight: 600; }
+.build-visual .scene { zoom: .95; }
+.tiles { display: grid; grid-template-columns: repeat(4, 44px); gap: 8px; }
+.tiles i { display: grid; place-items: center; height: 56px; border-radius: 10px; background: var(--surface); font-size: 9px; font-style: normal; font-weight: 600; color: var(--muted); box-shadow: 0 1px 2px rgba(0,0,0,.05); }
+.tiles i.pick { background: var(--surface); box-shadow: inset 0 0 0 2px var(--accent); }
+.tiles i.out { opacity: .5; text-decoration: line-through; }
+
+/* Case: problem and results */
+.kicker { margin: 0 0 10px; font-size: 14px; font-weight: 600; color: var(--accent); }
+.section-kicker { margin-top: clamp(56px, 7vw, 96px); margin-bottom: -20px; }
+.problem { padding-top: clamp(56px, 7vw, 96px); }
+.problem h2, .results h2 { max-width: 22em; font-size: clamp(26px, 2.8vw, 38px); line-height: 1.12; }
+.pains { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 24px; }
+.pains article { padding: 22px; border-radius: 20px; background: var(--surface); box-shadow: var(--shadow); }
+.pains h3 { font-size: 17px; margin-bottom: 8px; }
+.pains p { margin: 0; font-size: 15px; color: var(--muted); }
+.results { margin-top: clamp(64px, 8vw, 104px); padding: clamp(28px, 4vw, 48px); border-radius: 28px; background: var(--accent-tint); }
+.metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; margin-top: 24px; }
+.metrics div { padding: 18px; border-radius: 16px; background: var(--surface); }
+.metrics b { display: block; font-size: clamp(24px, 2.4vw, 34px); font-weight: 600; letter-spacing: -.04em; line-height: 1.05; }
+.metrics span { display: block; margin-top: 8px; font-size: 13px; color: var(--muted); }
+.outcomes { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
+.outcomes > div { padding: 20px 22px; border-radius: 16px; background: var(--surface); }
+.outcomes h3 { display: flex; align-items: center; gap: 8px; font-size: 16px; margin-bottom: 10px; }
+.outcomes h3::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #6f9a7c; }
+.outcomes .didnt h3::before { background: #c08a5a; }
+.outcomes ul { margin: 0; padding-left: 18px; }
+.outcomes li { margin: 0 0 8px; font-size: 15px; color: var(--muted); }
+.outcomes li:last-child { margin-bottom: 0; }
+@media (max-width: 960px) {
+  .build.featured { grid-template-columns: 1fr; }
+  .build.featured .build-visual { margin-right: 8px; min-height: 280px; }
+  .pains { grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+  .outcomes { grid-template-columns: 1fr; }
 }

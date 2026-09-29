@@ -9,7 +9,7 @@
 <meta property="og:description" content="Search and filters only work with what the catalog describes, and our enrichment was slow and inconsistent from season to season. I audited it, cut it back, then automated the attributes discovery depends on.">
 <meta property="og:image" content="https://www.hojunpark.com/hojun-park-portrait.jpg">
 <link rel="preload" href="/assets/fonts/Geist-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/styles.css">
+<link rel="stylesheet" href="/assets/styles.css?v=6">
 </head>
 <body>
 <header class="site-header"><div class="wrap">
@@ -36,6 +36,8 @@
 <div class="chips"><span>EN</span><span class="off">DE</span><span class="off">FR</span><span class="off">IT</span></div>
 </div></div></div></div>
 <div class="wrap">
+<section class="problem"><p class="kicker">The problem</p><h2>Discovery depended on product data that was slow to produce and inconsistent to use.</h2><div class="pains"><article><h3>Rules that fought each other</h3><p>313 enrichment rules had grown one at a time, and category logic overlapped and conflicted.</p></article><article><h3>Outfits linked by hand</h3><p>Complete-the-look links and model records were entered manually every season.</p></article><article><h3>One attribute, many meanings</h3><p>Color and fabric were written separately per language, so filters behaved differently by market.</p></article></div></section>
+<p class="kicker section-kicker">What I did</p>
 <section class="block"><div class="block-text"><h2>313 rules, audited</h2><p>The PIM had grown one rule at a time. We reviewed all 313, consolidated the category rules and rewrote the ones that conflicted.</p></div><div class="block-visual"><div style="width:100%;max-width:420px"><div class="cells" data-cells="313" aria-hidden="true"></div>
 <p style="margin:14px 0 0;font-weight:800">313 rules, each reviewed</p></div></div></section>
 <section class="block"><div class="block-text"><h2>Attributes from the product itself</h2><p>AI rules now set color and fabric, written in English first and translated after, so every market gets the same meaning.</p></div><div class="block-visual"><div class="scene" aria-hidden="true" style="max-width:400px"><div class="scene-bar"><b>Written once, translated after</b></div>
@@ -50,7 +52,8 @@
 </div></div></div></section>
 
 <section class="decision"><h2>The call</h2><ul class="options" style="--n:2"><li><h3>Automate what's there</h3><p>Faster, but it would have scaled rules that already conflicted.</p></li><li class="chosen"><span class="tag">What we did</span><h3>Audit and consolidate, then automate</h3><p>A slower start, with every automated rule sitting on a clean base.</p></li></ul></section>
-<section class="reflection"><h2>What I'd do differently</h2><p>I'd define a coverage measure at the start, like the share of products per category with a usable fabric value. It shows impact far better than counting rules and links.</p></section>
+<section class="results"><p class="kicker">Results</p><h2>Enrichment now runs on a smaller rule set, and the manual outfit work is gone.</h2><div class="metrics"><div><b>313</b><span>rules audited and consolidated</span></div><div><b>510</b><span>outfit links generated for FW26</span></div><div><b>24</b><span>model records created automatically</span></div></div><div class="outcomes"><div class="worked"><h3>What worked</h3><ul><li>Consolidating before automating, so every AI rule sits on a clean base.</li><li>Writing attributes in English first gave every market the same meaning.</li></ul></div><div class="didnt"><h3>What didn't</h3><ul><li>We didn't measure attribute coverage at the start, so the impact shows as counts rather than coverage gained.</li></ul></div></div></section>
+<section class="reflection"><h2>What I'd do differently</h2><p>I'd roll automation out category by category instead of season by season, so each gain is visible sooner and easier to attribute.</p></section>
 <nav class="next-case" aria-label="Next case"><span class="label">Next case</span><a href="/work/filters.html">Better filters from messy product data</a></nav>
 </div>
 </main>
@@ -62,6 +65,6 @@
 </div>
 </div></div></section>
 <footer class="site-footer"><div class="wrap"><span>© 2026 Hojun Park</span><span>Munich, Germany</span></div></footer>
-<script src="/assets/site.js"></script>
+<script src="/assets/site.js?v=6"></script>
 </body>
 </html>

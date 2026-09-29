@@ -9,7 +9,7 @@
 <meta property="og:description" content="Customers weren't using filters on large category pages, and many who did left soon after. The obvious fix was a new filter design. The real problem was the data behind it.">
 <meta property="og:image" content="https://www.hojunpark.com/hojun-park-portrait.jpg">
 <link rel="preload" href="/assets/fonts/Geist-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/styles.css">
+<link rel="stylesheet" href="/assets/styles.css?v=6">
 </head>
 <body>
 <header class="site-header"><div class="wrap">
@@ -42,7 +42,9 @@
 <div class="facet weak" data-show="before">Neckline <small>0</small></div>
 </div></div></div></div>
 <div class="wrap">
-<section class="block"><div class="block-text"><h2>Three systems, three spellings</h2><p>Filter values came from ERP, CMS and the shop system, and the same attribute was often defined three ways. A filter is only as good as the data behind it.</p></div><div class="block-visual"><div class="scene" aria-hidden="true" style="max-width:420px"><div class="scene-bar"><b>One attribute, three sources</b></div>
+<section class="problem"><p class="kicker">The problem</p><h2>Filters existed on every category page, but customers didn't trust them.</h2><div class="pains"><article><h3>Filters customers ignored</h3><p>On large category pages filter use was low, and a quarter of visitors on filtered pages bounced.</p></article><article><h3>One attribute, three spellings</h3><p>ERP, CMS and the shop system each defined the same values differently.</p></article><article><h3>Filters that returned nothing</h3><p>Some filters had almost no products behind them, which broke trust in the rest.</p></article></div></section>
+<p class="kicker section-kicker">What I did</p>
+<section class="block"><div class="block-text"><h2>Trace every value to its source</h2><p>I mapped where each filter value came from across ERP, CMS and the shop system, then agreed one definition per attribute with the teams that owned them.</p></div><div class="block-visual"><div class="scene" aria-hidden="true" style="max-width:420px"><div class="scene-bar"><b>One attribute, three sources</b></div>
 <div class="scene-body" style="display:grid;gap:8px">
 <div class="facet"><span>ERP</span><small>slim</small></div>
 <div class="facet"><span>CMS</span><small>Slim Fit</small></div>
@@ -57,17 +59,10 @@
 <div class="bar"><span>Pattern</span><i style="width:12%"></i><span>12%</span></div>
 <div class="bar"><span>Neckline</span><i style="width:4%"></i><span>4%</span></div></div>
 <p style="margin:0;font-size:13px;color:var(--ink-soft)">Illustrative. Filters below the bar were removed.</p></div></div></section>
-<section class="block"><div class="block-text"><h2>Results in 30 days</h2><p>Filter interactions rose 15% and bounce rate on filtered pages fell from 25% to 22.5% after the first release.</p></div><div class="block-visual"><div class="bars" aria-hidden="true">
-<div class="bar-row"><h4>Filter interactions, 30 days</h4>
-<div class="bar"><span>Before</span><i style="width:80%"></i><span>100</span></div>
-<div class="bar after"><span>After</span><i style="width:92%"></i><span>115</span></div></div>
-<div class="bar-row"><h4>Bounce rate, filtered pages</h4>
-<div class="bar"><span>Before</span><i style="width:100%"></i><span>25%</span></div>
-<div class="bar after"><span>After</span><i style="width:90%"></i><span>22.5%</span></div></div>
-</div></div></section>
 
 <section class="decision"><h2>Three paths we considered</h2><ul class="options" style="--n:3"><li><h3>Redesign the filter UI</h3><p>Fastest to show, but a better interface on top of the same gaps.</p></li><li><h3>Clean the whole catalog first</h3><p>Right in principle, but months before any customer saw a change.</p></li><li class="chosen"><span class="tag">What we did</span><h3>Fix category by category</h3><p>Ship each category once its data meets the bar, starting with the highest traffic.</p></li></ul></section>
-<section class="reflection"><h2>What I'd do differently</h2><p>I'd set up a control group from the start. Comparing against the previous period makes seasonality harder to rule out. I'd also bring merchandising in earlier, since they knew which attributes customers shopped by long before our data showed it.</p></section>
+<section class="results"><p class="kicker">Results</p><h2>More customers filtered, fewer left, and the coverage bar became the standard.</h2><div class="metrics"><div><b>+15%</b><span>filter interactions in 30 days</span></div><div><b>25% to 22.5%</b><span>bounce rate on filtered pages</span></div><div><b>300K</b><span>SKUs across 1,000+ categories</span></div></div><div class="outcomes"><div class="worked"><h3>What worked</h3><ul><li>Fixing the data before the design, so every release was something customers could rely on.</li><li>Removing weak filters, even though it looked like shipping less.</li></ul></div><div class="didnt"><h3>What didn't</h3><ul><li>No control group, so seasonality is hard to rule out.</li><li>Merchandising joined late, although they knew which attributes customers shopped by.</li></ul></div></div></section>
+<section class="reflection"><h2>What I'd do differently</h2><p>I'd set up a control group on day one and publish the coverage bar as a shared rule straight away, so other teams could apply it without us.</p></section>
 <nav class="next-case" aria-label="Next case"><span class="label">Next case</span><a href="/work/search-replatforming.html">Replatforming search and discovery</a></nav>
 </div>
 </main>
@@ -79,6 +74,6 @@
 </div>
 </div></div></section>
 <footer class="site-footer"><div class="wrap"><span>© 2026 Hojun Park</span><span>Munich, Germany</span></div></footer>
-<script src="/assets/site.js"></script>
+<script src="/assets/site.js?v=6"></script>
 </body>
 </html>

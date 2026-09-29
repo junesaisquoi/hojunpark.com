@@ -9,7 +9,7 @@
 <meta property="og:description" content="Product lead for e-commerce search, discovery and the catalog data behind them. Case studies and tools.">
 <meta property="og:image" content="https://www.hojunpark.com/hojun-park-portrait.jpg">
 <link rel="preload" href="/assets/fonts/Geist-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/styles.css">
+<link rel="stylesheet" href="/assets/styles.css?v=6">
 </head>
 <body>
 <header class="site-header"><div class="wrap">
@@ -110,27 +110,49 @@
 </div></section>
 
 <section class="section builds" id="builds"><div class="wrap">
-<div class="section-head"><h2>Things I've built</h2><p>When a manual process slowed the team down, I built a small tool to remove it. A few that stuck.</p></div>
+<div class="section-head"><h2>Things I've built</h2><p>Tools I built with AI to take manual work out of my team's week. Two now run as shared skills the whole team uses.</p></div>
 <div class="build-grid">
+<article class="build featured">
+<div class="build-visual"><div class="scene" aria-hidden="true" style="max-width:420px">
+<div class="scene-bar"><b>How a category is decided</b></div>
+<div class="facets">
+<div class="facet"><span>PIM category</span><small>attropt_category_men_pants_work</small></div>
+<div class="facet hl"><span>Category key</span><small>men-pants-work</small></div>
+<div class="facet"><span>Exists in the live tree</span><small>✓ checked</small></div>
+<div class="facet"><span>Removes only what it can prove</span><small>4 governed groups</small></div>
+</div>
+<div class="chips" style="margin-top:10px"><span class="on">33,036 products verified</span><span>Upload in one pass</span></div>
+</div></div>
+<div class="build-copy">
+<p class="label">Carhartt WIP, 2026</p>
+<h3>Category Builder</h3>
+<p class="pain"><b>Problem.</b> Seasonal categorization ran on an Excel macro that guessed product types from names. Plain tees ended up under Graphic Prints, and every run needed manual clean-up.</p>
+<p><b>Built.</b> An AI-assisted tool that derives every category from PIM, checks each one against the live category tree, and only removes a category when one attribute proves it wrong. Sale campaigns land in both the campaign and the regular sale tree automatically.</p>
+<p class="result">Replaced the macro, verified across all 33,036 products</p>
+</div>
+</article>
+<article class="build">
+<div class="build-visual"><div class="tiles" aria-hidden="true">
+<i class="pick"></i><i class="pick"></i><i class="out">Sale</i><i class="pick"></i><i class="out">Last drop</i><i class="pick"></i><i class="pick"></i><i class="pick"></i>
+</div></div>
+<div class="build-copy">
+<h3>Campaign Product Picker</h3>
+<p class="pain"><b>Problem.</b> Campaign edits were picked by hand in spreadsheets, and dates broke on import.</p>
+<p><b>Built.</b> A workflow that proposes the edit, rules out sale and recently featured items, and produces import files with dates intact.</p>
+<p class="result">Shared with the team as a versioned skill</p>
+</div>
+</article>
 <article class="build">
 <div class="build-visual"><div class="mini mini-stack">
 <div class="mini-row"><div class="mini-box">Requirement<br><code>fabric from description</code></div><span class="mini-arrow"></span><div class="mini-box fill">Akeneo rule</div></div>
 <div class="mini-row"><div class="mini-box">Requirement<br><code>color from image</code></div><span class="mini-arrow"></span><div class="mini-box fill">Akeneo rule</div></div>
 </div></div>
-<h3>AI rule generator</h3><p>Turns attribute requirements into Akeneo rules, so enrichment runs on its own.</p>
-</article>
-<article class="build">
-<div class="build-visual"><div class="mini" style="display:flex;justify-content:center;gap:28px">
-<div><div class="mini-count">510</div><div>outfit links</div></div>
-<div><div class="mini-count">24</div><div>model records</div></div>
-</div></div>
-<h3>Studio to PIM</h3><p>Scripts that connect photo-studio output to products and outfits in the PIM.</p>
-</article>
-<article class="build">
-<div class="build-visual"><div class="mini mini-row">
-<div class="mini-box">DE, FR, NO<br>copy</div><span class="mini-arrow"></span><div class="mini-box">HTML<br>template</div><span class="mini-arrow"></span><div class="mini-box fill">Ready to<br>upload</div>
-</div></div>
-<h3>Copy merge tool</h3><p>Puts translated product copy back into HTML templates, ready for Commercetools.</p>
+<div class="build-copy">
+<h3>AI rule generator</h3>
+<p class="pain"><b>Problem.</b> Writing enrichment rules by hand was slow and easy to get wrong.</p>
+<p><b>Built.</b> A generator that turns attribute requirements into Akeneo rules, so enrichment runs on its own.</p>
+<p class="result">Color and fabric enrichment automated</p>
+</div>
 </article>
 </div>
 </div></section>
@@ -154,6 +176,6 @@
 </div>
 </div></div></section>
 <footer class="site-footer"><div class="wrap"><span>© 2026 Hojun Park</span><span>Munich, Germany</span></div></footer>
-<script src="/assets/site.js"></script>
+<script src="/assets/site.js?v=6"></script>
 </body>
 </html>
