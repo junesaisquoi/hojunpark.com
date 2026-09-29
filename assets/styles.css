@@ -469,3 +469,27 @@ h1, h2, h3, h4 { margin: 0; font-weight: 600; letter-spacing: -.035em; line-heig
   .about-photo { max-width: 300px; }
 }
 .about-copy { max-width: 640px; }
+/* v9: larger avatar, no node overflow */
+.who { display: inline-flex; align-items: center; gap: 14px; margin: 0; font-size: 17px; font-weight: 600; letter-spacing: -.015em; color: var(--text); }
+.who img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; object-position: 50% 25%; box-shadow: 0 0 0 4px var(--surface), 0 6px 16px -8px rgba(28,28,30,.35); }
+.pipeline .node, .flow .node { min-width: 0; overflow-wrap: anywhere; hyphens: manual; }
+@media (max-width: 760px) { .who img { width: 52px; height: 52px; } }
+.who img { object-position: 50% 50%; box-shadow: 0 0 0 1px rgba(28,28,30,.08); }
+
+/* v9: responsive hero and diagrams */
+.pipeline .node, .flow .node { overflow-wrap: normal; word-break: normal; hyphens: manual; }
+.hero-card, .work-visual, .case-cover, .block-visual, .build-visual { container-type: inline-size; }
+.hero-card { min-height: 0; padding: clamp(20px, 3vw, 32px); }
+.hero-visual .badge { position: static; margin-top: 12px; background: var(--surface); box-shadow: var(--shadow); }
+@container (max-width: 460px) {
+  .pipeline { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pipeline::before, .pipeline .dot { display: none; }
+}
+@container (max-width: 520px) {
+  .flow { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .flow::before { display: none; }
+}
+@media (max-width: 1024px) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr); }
+  .hero-visual { justify-self: start; max-width: 560px; }
+}
