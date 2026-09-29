@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Automating product data enrichment | Hojun Park</title>
+<meta name="description" content="Search and filters only work with what the catalog describes, and our enrichment was slow and inconsistent from season to season. I audited it, cut it back, then automated the attributes discovery depends on.">
+<meta property="og:title" content="Automating product data enrichment | Hojun Park">
+<meta property="og:description" content="Search and filters only work with what the catalog describes, and our enrichment was slow and inconsistent from season to season. I audited it, cut it back, then automated the attributes discovery depends on.">
+<meta property="og:image" content="https://www.hojunpark.com/hojun-park-portrait.jpg">
+<link rel="preload" href="/assets/fonts/Geist-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="wordmark" href="/" aria-label="Hojun Park, home">Hojun Park</a>
+<nav class="site-nav" aria-label="Primary"><a href="/#work" aria-current="page">Work</a><a href="/#builds">Builds</a><a href="/about.html">About</a></nav>
+<a class="header-cta btn btn-primary btn-sm js-mail" href="#contact" data-u="hjp.hojun.park" data-d="gmail.com">Get in touch</a>
+</div></header>
+<main>
+
+<section class="case-hero"><div class="wrap">
+<a class="back" href="/#work">All work</a>
+<p class="label">Carhartt WIP, 2026</p>
+<h1>Automating product data enrichment</h1>
+<p class="lede">Search and filters only work with what the catalog describes, and our enrichment was slow and inconsistent from season to season. I audited it, cut it back, then automated the attributes discovery depends on.</p>
+<dl class="snapshot"><div><dt>Role</dt><dd>Product Lead</dd></div><div><dt>Timeline</dt><dd>2026, FW26 and SS27 seasons</dd></div><div><dt>Team</dt><dd>Content, copywriting, photo studio, production and development</dd></div><div><dt>Output</dt><dd>313 rules audited, 510 outfit links, 24 model records</dd></div></dl>
+</div></section>
+<div class="case-cover"><div class="scene" aria-hidden="true" style="max-width:380px">
+<div class="scene-bar"><b>Product record</b></div>
+<div class="scene-body" style="display:grid;grid-template-columns:96px 1fr;gap:14px;align-items:start">
+<svg viewBox="0 0 96 110" width="96" height="110"><rect width="96" height="110" fill="#f1efec"/><path d="M34 18 L48 26 L62 18 L80 30 L74 48 L66 44 L66 94 L30 94 L30 44 L22 48 L16 30 Z" fill="#141316" opacity=".88"/><path d="M48 26 L48 94" stroke="#f6f3f1" stroke-width="1.2" opacity=".6"/></svg>
+<div style="display:grid;gap:8px">
+<div class="chips"><span class="on">Color: brown</span><span class="on">Fabric: cotton canvas</span></div>
+<div class="chips"><span>Fit: relaxed</span><span>Outfit: 3 links</span></div>
+<div class="chips"><span>EN</span><span class="off">DE</span><span class="off">FR</span><span class="off">IT</span></div>
+</div></div></div></div>
+<div class="wrap">
+<section class="block"><div class="block-text"><h2>313 rules, audited</h2><p>The PIM had grown one rule at a time. We reviewed all 313, consolidated the category rules and rewrote the ones that conflicted.</p></div><div class="block-visual"><div style="width:100%;max-width:420px"><div class="cells" data-cells="313" aria-hidden="true"></div>
+<p style="margin:14px 0 0;font-weight:800">313 rules, each reviewed</p></div></div></section>
+<section class="block"><div class="block-text"><h2>Attributes from the product itself</h2><p>AI rules now set color and fabric, written in English first and translated after, so every market gets the same meaning.</p></div><div class="block-visual"><div class="scene" aria-hidden="true" style="max-width:400px"><div class="scene-bar"><b>Written once, translated after</b></div>
+<div class="scene-body" style="display:grid;gap:12px">
+<div class="facet"><span>EN</span><small>Cotton canvas, relaxed fit</small></div>
+<div class="chips"><span class="on">DE</span><span class="on">FR</span><span class="on">IT</span><span class="on">NL</span><span class="on">NO</span><span class="on">+8</span></div>
+</div></div></div></section>
+<section class="block"><div class="block-text"><h2>Outfits without typing</h2><p>Scripts read photo-studio output and create outfit links and model records in the PIM. For FW26 that was 510 links and 24 model records nobody entered by hand.</p></div><div class="block-visual"><div class="scene" aria-hidden="true" style="max-width:420px"><div class="scene-bar"><b>FW26, generated from studio output</b></div>
+<div class="scene-body" style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+<div class="facet" style="display:block"><div class="mini-count">510</div>outfit links</div>
+<div class="facet" style="display:block"><div class="mini-count">24</div>model records</div>
+</div></div></div></section>
+
+<section class="decision"><h2>The call</h2><ul class="options" style="--n:2"><li><h3>Automate what's there</h3><p>Faster, but it would have scaled rules that already conflicted.</p></li><li class="chosen"><span class="tag">What we did</span><h3>Audit and consolidate, then automate</h3><p>A slower start, with every automated rule sitting on a clean base.</p></li></ul></section>
+<section class="reflection"><h2>What I'd do differently</h2><p>I'd define a coverage measure at the start, like the share of products per category with a usable fabric value. It shows impact far better than counting rules and links.</p></section>
+<nav class="next-case" aria-label="Next case"><span class="label">Next case</span><a href="/work/filters.html">Better filters from messy product data</a></nav>
+</div>
+</main>
+<section class="contact" id="contact"><div class="wrap"><div>
+<h2>Working on search, discovery or product data? <span class="soft">Let's talk.</span></h2>
+<div class="contact-actions">
+<a class="btn btn-primary js-mail" href="#contact" data-u="hjp.hojun.park" data-d="gmail.com">Email me <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+<a class="btn btn-secondary" href="https://www.linkedin.com/in/hojunpark" target="_blank" rel="noreferrer">LinkedIn</a>
+</div>
+</div></div></section>
+<footer class="site-footer"><div class="wrap"><span>© 2026 Hojun Park</span><span>Munich, Germany</span></div></footer>
+<script src="/assets/site.js"></script>
+</body>
+</html>

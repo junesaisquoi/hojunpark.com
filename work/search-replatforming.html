@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Replatforming search and discovery | Hojun Park</title>
+<meta name="description" content="Carhartt WIP is moving search, browse and recommendations to a new engine, starting with Germany. I led the choice of engine, then the harder part: getting the catalog, the merchandising rules and the measurement ready for it.">
+<meta property="og:title" content="Replatforming search and discovery | Hojun Park">
+<meta property="og:description" content="Carhartt WIP is moving search, browse and recommendations to a new engine, starting with Germany. I led the choice of engine, then the harder part: getting the catalog, the merchandising rules and the measurement ready for it.">
+<meta property="og:image" content="https://www.hojunpark.com/hojun-park-portrait.jpg">
+<link rel="preload" href="/assets/fonts/Geist-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+<a class="wordmark" href="/" aria-label="Hojun Park, home">Hojun Park</a>
+<nav class="site-nav" aria-label="Primary"><a href="/#work" aria-current="page">Work</a><a href="/#builds">Builds</a><a href="/about.html">About</a></nav>
+<a class="header-cta btn btn-primary btn-sm js-mail" href="#contact" data-u="hjp.hojun.park" data-d="gmail.com">Get in touch</a>
+</div></header>
+<main>
+
+<section class="case-hero"><div class="wrap">
+<a class="back" href="/#work">All work</a>
+<p class="label">Carhartt WIP, 2026</p>
+<h1>Replatforming search and discovery</h1>
+<p class="lede">Carhartt WIP is moving search, browse and recommendations to a new engine, starting with Germany. I led the choice of engine, then the harder part: getting the catalog, the merchandising rules and the measurement ready for it.</p>
+<dl class="snapshot"><div><dt>Role</dt><dd>Product Lead</dd></div><div><dt>Timeline</dt><dd>Evaluation early 2026, MVP October, full integration by end of 2026</dd></div><div><dt>Team</dt><dd>Web and app engineering, an implementation partner, the vendor and merchandising</dd></div><div><dt>Scope</dt><dd>Up to 50K SKUs including variants, 25 markets</dd></div></dl>
+</div></section>
+<div class="case-cover"><div class="scene" aria-hidden="true">
+<div class="scene-bar"><b>Catalog to customer</b></div>
+<div class="scene-body">
+<div class="pipeline"><span class="dot"></span>
+<div class="node">Akeneo<small>PIM</small></div>
+<div class="node">Commercetools<small>Catalog</small></div>
+<div class="node hot">Constructor<small>Search</small></div>
+<div class="node">Web and app<small>Shoppers</small></div>
+</div>
+<div class="flags"><span>New-arrival dates no longer overwritten</span><span>Attribute names aligned with the source</span></div>
+</div></div></div>
+<div class="wrap">
+<section class="block"><div class="block-text"><h2>One brief, six engines</h2><p>I wrote a single brief covering what the business needed: ranking we could explain, merchandising across markets, recommendations, and tests teams could run without engineering. Six engines were scored against it. I then led the commercial negotiation, including a success target we could measure.</p></div><div class="block-visual"><div class="scene" aria-hidden="true" style="max-width:420px"><div class="scene-bar"><b>The brief, scored for six engines</b></div>
+<div class="scene-body" style="display:grid;gap:8px">
+<div class="facet"><span>Ranking we can explain</span></div>
+<div class="facet"><span>Merchandising across markets</span></div>
+<div class="facet"><span>Recommendations</span></div>
+<div class="facet"><span>Tests without engineering</span></div>
+<div class="facet"><span>Fit with our catalog and variants</span></div>
+<div class="chips" style="margin-top:6px"><span class="off">Five other engines</span><span class="on">Constructor</span></div>
+</div></div></div></section>
+<section class="block"><div class="block-text"><h2>Fix the catalog before the launch</h2><p>The old engine received product data through a separate feed, so names and values drifted from the source. A date bug kept resetting which products counted as new. We fixed both before switching, so the new engine starts clean.</p></div><div class="block-visual"><div class="scene" aria-hidden="true" style="max-width:420px"><div class="scene-bar"><b>Fixed before launch</b></div>
+<div class="scene-body" style="display:grid;gap:10px">
+<div class="facet"><span>New-arrival dates</span><small>no longer reset overnight</small></div>
+<div class="facet"><span>Attribute names</span><small>match the source catalog</small></div>
+<div class="facet"><span>Revenue tracking</span><small>in place before launch</small></div>
+</div></div></div></section>
+<section class="block"><div class="block-text"><h2>Browse: rules that survive the model</h2><p>Filters come from a curated set of attributes, six to nine per page, with category rules on top. Merchandising boosts sit above the learned ranking, so campaigns survive model updates, and sold-out products stay visible but rank low.</p></div><div class="block-visual"><div class="scene" style="max-width:360px"><div class="scene-bar"><b>Category page</b></div>
+<div class="scene-body">
+<div class="toggle" data-toggle="scope" data-autoplay role="group" aria-label="Choose a category"><button type="button" data-value="jackets" aria-pressed="true">Jackets</button><button type="button" data-value="shoes" aria-pressed="false">Footwear</button></div>
+<div class="facets" id="scope">
+<div class="facet" data-show="jackets shoes">Color</div>
+<div class="facet" data-show="jackets">Size</div>
+<div class="facet" data-show="shoes">Shoe size</div>
+<div class="facet" data-show="jackets shoes">Material</div>
+<div class="facet" data-show="jackets">Length</div>
+<div class="facet" data-show="shoes">Width</div>
+<div class="facet" data-show="jackets shoes">Price</div>
+</div>
+<div class="chips" style="margin-top:12px"><span class="on">Boost: new arrivals</span><span>Bury: sold out</span></div>
+</div></div></div></section>
+<section class="block"><div class="block-text"><h2>Recommendations: designed, not copied</h2><p>I mapped every current placement, then proposed a new setup rather than porting the old rules. Each pod gets one goal, one anchor, a strategy and a fallback. Curated outfit links fill Complete the look first. One deliberate difference: search keeps sold-out items visible but ranked low, while recommendations leave them out.</p></div><div class="block-visual"><div class="scene" style="max-width:440px"><div class="scene-bar"><b>Recommendation pods, proposed setup</b></div>
+<div class="scene-body">
+<div class="toggle" data-toggle="pods" data-autoplay role="group" aria-label="Choose a placement"><button type="button" data-value="look" aria-pressed="true">Complete the look</button><button type="button" data-value="alt" aria-pressed="false">Also like</button><button type="button" data-value="cart" aria-pressed="false">Cart</button><button type="button" data-value="err" aria-pressed="false">404</button><button type="button" data-value="zero" aria-pressed="false">Search</button></div>
+<div class="facets" id="pods">
+<div class="facet" data-show="look"><span>Goal</span><small>Grow the basket</small></div>
+<div class="facet" data-show="alt"><span>Goal</span><small>Keep the shopper when the item isn't right</small></div>
+<div class="facet" data-show="cart"><span>Goal</span><small>Low-cost add-on before checkout</small></div>
+<div class="facet" data-show="err"><span>Goal</span><small>Recover the visit</small></div>
+<div class="facet" data-show="zero"><span>Goal</span><small>Inspire before typing</small></div>
+<div class="facet" data-show="look alt"><span>Anchor</span><small>Current product</small></div>
+<div class="facet" data-show="cart"><span>Anchor</span><small>Items in the cart</small></div>
+<div class="facet" data-show="err"><span>Anchor</span><small>Browsing history</small></div>
+<div class="facet hl" data-show="look"><span>Strategy</span><small>Curated outfit links from the PIM</small></div>
+<div class="facet hl" data-show="alt"><span>Strategy</span><small>Alternative items</small></div>
+<div class="facet hl" data-show="cart"><span>Strategy</span><small>Complementary items</small></div>
+<div class="facet hl" data-show="err"><span>Strategy</span><small>Personalized picks</small></div>
+<div class="facet hl" data-show="zero"><span>Strategy</span><small>Best sellers</small></div>
+<div class="facet" data-show="look"><span>Fallback</span><small>Complementary items</small></div>
+<div class="facet" data-show="alt"><span>Fallback</span><small>Best sellers, same type</small></div>
+<div class="facet" data-show="cart"><span>Fallback</span><small>Best sellers, accessories</small></div>
+<div class="facet" data-show="err"><span>Fallback</span><small>Best sellers</small></div>
+<div class="facet" data-show="look alt"><span>Rules</span><small>In stock, gender match, current season boosted</small></div>
+<div class="facet" data-show="cart"><span>Rules</span><small>One size, 10 to 50 euros</small></div>
+<div class="facet" data-show="err"><span>Rules</span><small>In stock, current season boosted</small></div>
+<div class="facet" data-show="look alt err"><span>Results</span><small>8</small></div>
+<div class="facet" data-show="cart"><span>Results</span><small>4</small></div>
+<div class="facet" data-show="zero"><span>Results</span><small>6</small></div>
+</div></div></div></div></section>
+
+<section class="decision"><h2>How we'll know it worked</h2><ul class="options" style="--n:2"><li><h3>Vendor dashboards</h3><p>Quick to read, but each engine reports differently, and the old one saw different traffic.</p></li><li class="chosen"><span class="tag">What we did</span><h3>GA4 before and after, against a locked baseline</h3><p>One source and one baseline, captured before launch. Less flattering, and much harder to dispute.</p></li></ul></section>
+<section class="reflection"><h2>What I'd do differently</h2><p>I'd agree the measurement design before signing, not during the build. Two tracking gaps only surfaced in implementation, and both would have shaped how we defined success.</p></section>
+<nav class="next-case" aria-label="Next case"><span class="label">Next case</span><a href="/work/data-enrichment.html">Automating product data enrichment</a></nav>
+</div>
+</main>
+<section class="contact" id="contact"><div class="wrap"><div>
+<h2>Working on search, discovery or product data? <span class="soft">Let's talk.</span></h2>
+<div class="contact-actions">
+<a class="btn btn-primary js-mail" href="#contact" data-u="hjp.hojun.park" data-d="gmail.com">Email me <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+<a class="btn btn-secondary" href="https://www.linkedin.com/in/hojunpark" target="_blank" rel="noreferrer">LinkedIn</a>
+</div>
+</div></div></section>
+<footer class="site-footer"><div class="wrap"><span>© 2026 Hojun Park</span><span>Munich, Germany</span></div></footer>
+<script src="/assets/site.js"></script>
+</body>
+</html>
