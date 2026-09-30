@@ -493,3 +493,12 @@ h1, h2, h3, h4 { margin: 0; font-weight: 600; letter-spacing: -.035em; line-heig
   .hero-grid { grid-template-columns: minmax(0, 1fr); }
   .hero-visual { justify-self: start; max-width: 560px; }
 }
+
+/* v11: grey rose accent, sampled from the portrait background */
+:root { --mauve: #7a6c70; --mauve-tint: #eeeaea; }
+.hero-card { background: var(--mauve-tint); }
+.numbers li { background: var(--mauve-tint); }
+.pulse { background: var(--mauve); animation-name: pulse-rose; }
+@keyframes pulse-rose { 0% { box-shadow: 0 0 0 0 rgba(122,108,112,.45); } 70% { box-shadow: 0 0 0 10px rgba(122,108,112,0); } 100% { box-shadow: 0 0 0 0 rgba(122,108,112,0); } }
+.problem .kicker { color: var(--mauve); }
+.work-copy .result.progress { background: var(--mauve-tint); color: var(--mauve); }
