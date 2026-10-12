@@ -107,3 +107,7 @@ if ('IntersectionObserver' in window && !reduce) {
 var hdr = document.querySelector('.site-header');
 function onScroll() { if (hdr) hdr.classList.toggle('scrolled', window.scrollY > 8); }
 window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+// Keep the current case visible in the horizontal case switcher.
+var cur = document.querySelector('.case-nav-links a.current');
+if (cur && cur.parentNode.scrollWidth > cur.parentNode.clientWidth) { cur.parentNode.scrollLeft = cur.offsetLeft - cur.parentNode.offsetLeft - 24; }
