@@ -533,3 +533,6 @@ h1, h2, h3, h4 { margin: 0; font-weight: 600; letter-spacing: -.035em; line-heig
 .case-pager small { font-size: 13px; font-weight: 500; color: var(--muted); }
 .case-pager svg { flex: none; width: 18px; height: 18px; color: var(--muted); }
 @media (max-width: 760px) { .case-pager { grid-template-columns: 1fr; } .case-pager a.next { justify-content: space-between; text-align: left; } }
+
+/* v14.1: project-type tag next to the date */
+.type-tag { display: inline-flex; align-items: center; margin-left: 8px; padding: 2px 9px; border-radius: 999px; background: var(--mauve-tint); color: var(--mauve); font-size: 12px; font-weight: 600; vertical-align: 1px; }
