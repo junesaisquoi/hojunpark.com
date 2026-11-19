@@ -571,3 +571,12 @@ h1, h2, h3, h4 { margin: 0; font-weight: 600; letter-spacing: -.035em; line-heig
   .id-head { align-items: flex-start; }
   .id-head .id-photo { width: 64px; height: 64px; }
 }
+
+/* v17: hook line */
+.id-hook { margin: 0 0 10px; font-size: clamp(22px, 2.4vw, 28px); font-weight: 600; letter-spacing: -.035em; line-height: 1.2; color: var(--text); }
+
+/* v17: role tiles */
+.facts-row.roles b { font-size: 16px; letter-spacing: -.02em; line-height: 1.25; }
+.facts-row.roles span { font-size: 13px; }
+
+.id-card { max-width: 760px; }
