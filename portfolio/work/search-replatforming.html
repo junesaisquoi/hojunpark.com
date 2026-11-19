@@ -26,7 +26,7 @@
 <p class="label">Carhartt WIP, 2026</p>
 <h1>Replatforming search, browse and recommendations</h1>
 <p class="lede">I own Carhartt WIP's move to a new discovery platform and its scale-up: the requirements, the vendor choice, the roadmap, the UX, and the scrum team of engineers delivering it on web and app.</p>
-<dl class="snapshot"><div><dt>Role</dt><dd>Product lead and product owner of the scrum team</dd></div><div><dt>Timeline</dt><dd>Requirements from February 2026, MVP live in Germany in October, English and French next</dd></div><div><dt>Team</dt><dd>Web and app engineers, an implementation partner, the vendor and merchandising</dd></div><div><dt>Scale</dt><dd>25 markets, 39 locales, web and app</dd></div></dl>
+<dl class="snapshot"><div><dt>Role</dt><dd>Product lead and product owner of the scrum team</dd></div><div><dt>Timeline</dt><dd>Requirements from February 2026, MVP live in Germany in October, rolling out across markets</dd></div><div><dt>Team</dt><dd>Web and app engineers, an implementation partner, the vendor and merchandising</dd></div><div><dt>Scale</dt><dd>25 markets, 39 locales, web and app</dd></div></dl>
 </div></section>
 <div class="case-cover"><div class="scene" aria-hidden="true">
 <div class="scene-bar"><b>Catalog to customer</b></div>
@@ -37,10 +37,10 @@
 <div class="node hot">Constructor<small>Search</small></div>
 <div class="node">Web and app<small>Shoppers</small></div>
 </div>
-<div class="flags"><span>New-arrival dates no longer overwritten</span><span>Attribute names aligned with the source</span></div>
+<div class="flags"><span>Product data straight from the source</span><span>Attribute names aligned with the source</span></div>
 </div></div></div>
 <div class="wrap">
-<section class="problem"><p class="kicker">The problem</p><h2>The business needed discovery the team could steer, test and scale across markets on its own.</h2><div class="pains"><article><h3>Steering without engineering</h3><p>Merchandisers needed to see and adjust why products ranked where they did, without raising an engineering ticket.</p></article><article><h3>Testing the team can run</h3><p>We ran recommendation A/B tests together with the vendor, but the team couldn't set up tests on its own.</p></article><article><h3>One source of product data</h3><p>The engine needed product data straight from the source catalog rather than through a separate feed.</p></article></div></section>
+<section class="problem"><p class="kicker">The problem</p><h2>The business needed discovery the team could steer, test and scale across markets on its own.</h2><div class="pains"><article><h3>Steering without engineering</h3><p>Merchandisers needed to see and adjust why products ranked where they did, without raising an engineering ticket.</p></article><article><h3>Testing the team can run</h3><p>The team wanted to set up and read tests on its own.</p></article><article><h3>One source of product data</h3><p>The engine needed product data straight from the source catalog rather than through a separate feed.</p></article></div></section>
 <p class="kicker section-kicker">What I did</p>
 <section class="block"><div class="block-text"><h2>Defined the platform before picking a vendor</h2><p>I wrote 87 requirements across search, merchandising, recommendations and the platform itself, and split them into MVP and later phases. Every demo and every vendor score used them, which kept the decision about our problems rather than the best demo.</p></div><div class="block-visual"><div class="scene" aria-hidden="true" style="max-width:420px"><div class="scene-bar"><b>Requirements by pillar</b><b>87 in total</b></div>
 <div class="bars" style="max-width:none">
@@ -52,12 +52,12 @@
 <div class="chips" style="margin-top:12px"><span class="on">MVP scope</span><span>Later phases</span></div>
 </div></div></section>
 <section class="block"><div class="block-text"><h2>Ran delivery as a scrum team</h2><p>Two-week sprints from contract to MVP. I own the board, the priorities, the measurement strategy and the merchandising rules, and I set the go-live plan across web, app, the implementation partner and the vendor.</p></div><div class="block-visual"><div class="scene" aria-hidden="true" style="max-width:440px"><div class="scene-bar"><b>Delivery plan</b><b>2026</b></div>
-<div class="sprints"><i>S1</i><i>S2</i><i>S3</i><i>S4</i><i class="mvp">S5<br>MVP</i><i>S6</i><i class="later">Full integration by year end</i></div>
+<div class="sprints"><i>S1</i><i>S2</i><i>S3</i><i>S4</i><i class="mvp">S5<br>MVP</i><i>S6</i><i class="later">Then market rollout</i></div>
 <div class="chips" style="margin-top:12px"><span class="on">Backlog and priorities</span><span>Web</span><span>App</span><span>Partner</span><span>Vendor</span></div>
 </div></div></section>
-<section class="block"><div class="block-text"><h2>Fixed the data first</h2><p>Attribute names now match the source catalog, new-arrival dates no longer reset overnight, so the new engine starts clean.</p></div><div class="block-visual"><div class="scene" aria-hidden="true" style="max-width:420px"><div class="scene-bar"><b>Fixed before launch</b></div>
+<section class="block"><div class="block-text"><h2>Fixed the data first</h2><p>Attribute names now match the source catalog, and new-arrival dates now stay stable, so the new engine starts clean.</p></div><div class="block-visual"><div class="scene" aria-hidden="true" style="max-width:420px"><div class="scene-bar"><b>Fixed before launch</b></div>
 <div class="scene-body" style="display:grid;gap:10px">
-<div class="facet"><span>New-arrival dates</span><small>no longer reset overnight</small></div>
+<div class="facet"><span>New-arrival dates</span><small>stable from source</small></div>
 <div class="facet"><span>Attribute names</span><small>match the source catalog</small></div>
 </div></div></div></section>
 <section class="block"><div class="block-text"><h2>Designed the browse experience</h2><p>Curated filters per category, six to nine per page. Merchandising rules sit on top of the ranking model, so campaigns survive model updates, and sold-out products stay visible but rank low.</p></div><div class="block-visual"><div class="scene" style="max-width:360px"><div class="scene-bar"><b>Category page</b></div>
@@ -74,41 +74,14 @@
 </div>
 <div class="chips" style="margin-top:12px"><span class="on">Boost: new arrivals</span><span>Bury: sold out</span></div>
 </div></div></div></section>
-<section class="block"><div class="block-text"><h2>Rebuilt recommendations around business goals</h2><p>I audited every existing placement and proposed a new strategy. Each placement gets one goal, a primary strategy, a fallback and guardrails. Search keeps sold-out items ranked low, while recommendations leave them out.</p></div><div class="block-visual"><div class="scene" style="max-width:440px"><div class="scene-bar"><b>Recommendation pods, proposed setup</b></div>
-<div class="scene-body">
-<div class="toggle" data-toggle="pods" data-autoplay role="group" aria-label="Choose a placement"><button type="button" data-value="look" aria-pressed="true">Complete the look</button><button type="button" data-value="alt" aria-pressed="false">Also like</button><button type="button" data-value="cart" aria-pressed="false">Cart</button><button type="button" data-value="err" aria-pressed="false">404</button><button type="button" data-value="zero" aria-pressed="false">Search</button></div>
-<div class="facets" id="pods">
-<div class="facet" data-show="look"><span>Goal</span><small>Grow the basket</small></div>
-<div class="facet" data-show="alt"><span>Goal</span><small>Keep the shopper when the item isn't right</small></div>
-<div class="facet" data-show="cart"><span>Goal</span><small>Low-cost add-on before checkout</small></div>
-<div class="facet" data-show="err"><span>Goal</span><small>Recover the visit</small></div>
-<div class="facet" data-show="zero"><span>Goal</span><small>Inspire before typing</small></div>
-<div class="facet" data-show="look alt"><span>Anchor</span><small>Current product</small></div>
-<div class="facet" data-show="cart"><span>Anchor</span><small>Items in the cart</small></div>
-<div class="facet" data-show="err"><span>Anchor</span><small>Browsing history</small></div>
-<div class="facet hl" data-show="look"><span>Strategy</span><small>Curated outfit links from the PIM</small></div>
-<div class="facet hl" data-show="alt"><span>Strategy</span><small>Alternative items</small></div>
-<div class="facet hl" data-show="cart"><span>Strategy</span><small>Complementary items</small></div>
-<div class="facet hl" data-show="err"><span>Strategy</span><small>Personalized picks</small></div>
-<div class="facet hl" data-show="zero"><span>Strategy</span><small>Best sellers</small></div>
-<div class="facet" data-show="look"><span>Fallback</span><small>Complementary items</small></div>
-<div class="facet" data-show="alt"><span>Fallback</span><small>Best sellers, same type</small></div>
-<div class="facet" data-show="cart"><span>Fallback</span><small>Best sellers, accessories</small></div>
-<div class="facet" data-show="err"><span>Fallback</span><small>Best sellers</small></div>
-<div class="facet" data-show="look alt"><span>Rules</span><small>In stock, gender match, current season boosted</small></div>
-<div class="facet" data-show="cart"><span>Rules</span><small>One size, low price point</small></div>
-<div class="facet" data-show="err"><span>Rules</span><small>In stock, current season boosted</small></div>
-<div class="facet" data-show="look alt err"><span>Results</span><small>8</small></div>
-<div class="facet" data-show="cart"><span>Results</span><small>4</small></div>
-<div class="facet" data-show="zero"><span>Results</span><small>6</small></div>
-</div></div></div></div></section>
+<section class="block"><div class="block-text"><h2>Rebuilt recommendations around business goals</h2><p>I audited every existing placement and set one principle for all of them: each placement gets one goal, a primary strategy, a fallback and guardrails. Search keeps sold-out items ranked low, while recommendations leave them out.</p></div><div class="block-visual"><div class="scene" aria-hidden="true" style="max-width:440px"><div class="scene-bar"><b>Every placement</b></div><div class="facets"><div class="facet hl"><span>Goal</span><small>one per placement</small></div><div class="facet"><span>Strategy</span><small>primary, plus a fallback</small></div><div class="facet"><span>Guardrails</span><small>stock, relevance, season</small></div></div></div></div></section>
 
-<section class="block"><div class="block-text"><h2>Planned the scale-up beyond the MVP</h2><p>The MVP is live in Germany. I own the plan after it: English and French channels next, with recommendations and a new search results page, then the remaining markets and testing the team can run on its own.</p></div><div class="block-visual"><div class="scene" aria-hidden="true" style="max-width:460px"><div class="scene-bar"><b>Roadmap beyond the MVP</b></div>
-<div class="phases"><div class="ph now"><b>October</b><span>Live in Germany</span><small>Search, autosuggest, browse, collections</small></div><div class="ph"><b>Next</b><span>English and French</span><small>Recommendations, new search results page</small></div><div class="ph"><b>Then</b><span>Remaining markets</span><small>And testing the team can run</small></div></div></div></div></section>
+<section class="block"><div class="block-text"><h2>Planned the scale-up beyond the MVP</h2><p>The MVP is live in Germany. I own the plan after it: rolling out market by market, adding recommendations, and testing the team can run on its own.</p></div><div class="block-visual"><div class="scene" aria-hidden="true" style="max-width:460px"><div class="scene-bar"><b>Roadmap beyond the MVP</b></div>
+<div class="phases"><div class="ph now"><b>October</b><span>Live in Germany</span><small>Search, autosuggest, browse, collections</small></div><div class="ph"><b>Next</b><span>More markets</span><small>Plus recommendations</small></div><div class="ph"><b>Then</b><span>All 25 markets</span><small>And testing the team can run</small></div></div></div></div></section>
 
-<section class="decision"><h2>How we'll know it worked</h2><ul class="options" style="--n:2"><li><h3>The vendor's own reporting</h3><p>Quick to read, but each platform reports in its own way.</p></li><li class="chosen"><span class="tag">What we did</span><h3>Our own analytics, against a baseline set before launch</h3><p>One source the business already trusts. Less flattering, and much harder to dispute.</p></li></ul></section>
-<section class="results"><p class="kicker">Where it stands</p><h2>The MVP is live in Germany. English and French channels follow, then the remaining markets.</h2><div class="metrics"><div><b>39</b><span>locales in 7 languages</span></div><div><b>87</b><span>requirements across four pillars</span></div><div><b>25</b><span>markets in scope</span></div><div><b>Live</b><span>in Germany since October</span></div></div><div class="outcomes"><div class="worked"><h3>What's working</h3><ul><li>One set of requirements kept the vendor choice about our problems, not the best demo.</li><li>Fixing catalog data before the switch, so the new engine doesn't inherit old errors.</li></ul></div><div class="didnt"><h3>What's next</h3><ul><li>Rolling out market by market, so each launch is checked before the next.</li><li>Moving search merchandising into the team's weekly routine after launch.</li></ul></div></div></section>
-<section class="reflection"><h2>What I'd do differently</h2><p>I'd agree the measurement design with the vendor before signing, so success is defined the same way on both sides from day one.</p></section>
+<section class="decision"><h2>How we'll know it worked</h2><ul class="options" style="--n:2"><li><h3>Separate platform dashboards</h3><p>Quick to read, but apart from the rest of our reporting.</p></li><li class="chosen"><span class="tag">What we did</span><h3>Our own analytics, against a baseline set before launch</h3><p>One source the business already trusts, comparable across every phase.</p></li></ul></section>
+<section class="results"><p class="kicker">Where it stands</p><h2>The MVP is live in Germany, with the remaining markets to follow.</h2><div class="metrics"><div><b>39</b><span>locales in 7 languages</span></div><div><b>87</b><span>requirements across four pillars</span></div><div><b>25</b><span>markets in scope</span></div><div><b>Live</b><span>in Germany since October</span></div></div><div class="outcomes"><div class="worked"><h3>What's working</h3><ul><li>One set of requirements kept the vendor choice about our problems, not the best demo.</li><li>Fixing catalog data before the switch, so the new engine doesn't inherit old errors.</li></ul></div><div class="didnt"><h3>What's next</h3><ul><li>Rolling out market by market, so each launch is checked before the next.</li><li>Moving search merchandising into the team's weekly routine after launch.</li></ul></div></div></section>
+<section class="reflection"><h2>What I'd do differently</h2><p>I'd set the pre-launch baseline even earlier, during requirements, so every phase is measured from the same starting point.</p></section>
 <nav class="case-pager" aria-label="More case studies"><a class="prev" href="/portfolio/work/fine-jewelry.html"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span><small>Previous</small>Fine jewelry: a new high-value product line</span></a><a class="next" href="/portfolio/work/data-enrichment.html"><span><small>Next</small>Automating the product data flow</span><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></nav>
 </div>
 </main>
